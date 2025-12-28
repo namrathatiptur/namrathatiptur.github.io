@@ -347,12 +347,23 @@ body {
     border-radius: 980px;
     transition: var(--transition);
     background: transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.link-button i {
+    font-size: 16px;
 }
 
 .link-button:hover {
     background: var(--primary-color);
     color: var(--background);
     transform: translateY(-2px);
+}
+
+.link-button:hover i {
+    color: var(--background);
 }
 
 /* Sections */
