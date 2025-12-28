@@ -470,6 +470,10 @@ body {
     gap: 8px;
 }
 
+.coursework-list.expanded {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
 .coursework-list li {
     font-size: 15px;
     color: var(--secondary-color);
@@ -488,11 +492,22 @@ body {
 
 /* Hide items after the 4th one by default */
 .coursework-list li:nth-child(n+5) {
-    display: none;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease, margin 0.4s ease;
 }
 
 .coursework-list.expanded li:nth-child(n+5) {
-    display: block;
+    max-height: 50px;
+    opacity: 1;
+    overflow: visible;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin: 0;
 }
 
 .show-more-btn {
