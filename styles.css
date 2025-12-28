@@ -339,21 +339,22 @@ body {
 }
 
 .link-button {
-    padding: 12px 28px;
+    padding: 14px 18px;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
     text-decoration: none;
-    font-size: 17px;
     border-radius: 980px;
     transition: var(--transition);
     background: transparent;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
 }
 
 .link-button i {
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .link-button:hover {
