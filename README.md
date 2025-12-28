@@ -2,11 +2,11 @@
 
 A minimalistic, Apple-style portfolio website showcasing professional experience, projects, and technical skills.
 
-## 🌐 Live Site
+## Live Site
 
 **https://namrathatiptur.github.io/**
 
-## ✨ Features
+## Features
 
 - Clean, minimalistic design inspired by Apple's aesthetic
 - Fully responsive layout for all devices
@@ -14,7 +14,7 @@ A minimalistic, Apple-style portfolio website showcasing professional experience
 - Geometric background graphics
 - Interactive project showcases with device mockups
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - HTML5
 - CSS3 (with CSS Grid & Flexbox)
@@ -22,7 +22,7 @@ A minimalistic, Apple-style portfolio website showcasing professional experience
 - Font Awesome Icons
 - Devicon (for tech stack icons)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 portfolio/
@@ -32,7 +32,7 @@ portfolio/
 └── README.md       # Project documentation
 ```
 
-## 🚀 Local Development
+## Local Development
 
 Simply open `index.html` in a web browser, or use a local server:
 
@@ -46,6 +46,6 @@ npx http-server
 
 Then visit `http://localhost:8000` in your browser.
 
-## 📝 License
+## License
 
 © 2024 Namratha Tiptur Manjunath. All rights reserved.
