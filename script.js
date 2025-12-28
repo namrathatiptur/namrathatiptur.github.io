@@ -119,5 +119,29 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 
+    // Mobile support for hero badge hover
+    const heroBadgeContainer = document.querySelector('.hero-badge-container');
+    const heroBadgeHover = document.querySelector('.hero-badge-hover');
+    
+    if (heroBadgeContainer && heroBadgeHover) {
+        // Check if device supports hover
+        const hasHover = window.matchMedia('(hover: hover)').matches;
+        
+        if (!hasHover) {
+            // For touch devices, toggle on click
+            heroBadgeContainer.addEventListener('click', function(e) {
+                e.stopPropagation();
+                heroBadgeContainer.classList.toggle('mobile-active');
+            });
+            
+            // Close when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!heroBadgeContainer.contains(e.target)) {
+                    heroBadgeContainer.classList.remove('mobile-active');
+                }
+            });
+        }
+    }
+
 });
 

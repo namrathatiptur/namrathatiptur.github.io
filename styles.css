@@ -287,6 +287,12 @@ body {
     max-width: 800px;
 }
 
+.hero-badge-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
 .hero-badge {
     display: inline-block;
     padding: 8px 20px;
@@ -297,15 +303,162 @@ body {
     font-weight: 500;
     color: var(--primary-color);
     letter-spacing: 0.02em;
-    margin-bottom: 24px;
     transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
 }
 
-.hero-badge:hover {
+.hero-badge-container:hover .hero-badge {
     background: var(--primary-color);
     color: var(--background);
     border-color: var(--primary-color);
     transform: translateY(-2px);
+}
+
+.hero-badge-hover {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px) scale(0.95);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 10;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 320px;
+    max-width: 400px;
+}
+
+.hero-badge-container:hover .hero-badge-hover,
+.hero-badge-container.mobile-active .hero-badge-hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.badge-hover-content {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12),
+                0 2px 8px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    position: relative;
+}
+
+.badge-hover-content::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid var(--background);
+}
+
+.badge-hover-content::after {
+    content: '';
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid var(--border);
+    z-index: -1;
+}
+
+.badge-hover-section {
+    margin-bottom: 20px;
+}
+
+.badge-hover-section:last-child {
+    margin-bottom: 0;
+}
+
+.badge-hover-section h4 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--secondary-color);
+    margin-bottom: 12px;
+}
+
+.badge-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.role-tag {
+    display: inline-block;
+    padding: 6px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--primary-color);
+    transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-badge-container:hover .role-tag,
+.hero-badge-container.mobile-active .role-tag {
+    background: var(--primary-color);
+    color: var(--background);
+    border-color: var(--primary-color);
+}
+
+.hero-badge-container:hover .role-tag:nth-child(1),
+.hero-badge-container.mobile-active .role-tag:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.hero-badge-container:hover .role-tag:nth-child(2),
+.hero-badge-container.mobile-active .role-tag:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.hero-badge-container:hover .role-tag:nth-child(3),
+.hero-badge-container.mobile-active .role-tag:nth-child(3) {
+    transition-delay: 0.15s;
+}
+
+.hero-badge-container:hover .role-tag:nth-child(4),
+.hero-badge-container.mobile-active .role-tag:nth-child(4) {
+    transition-delay: 0.2s;
+}
+
+.hero-badge-container:hover .role-tag:nth-child(5),
+.hero-badge-container.mobile-active .role-tag:nth-child(5) {
+    transition-delay: 0.25s;
+}
+
+.badge-duration {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+}
+
+.badge-status {
+    font-size: 13px;
+    color: var(--secondary-color);
+    margin: 0;
 }
 
 .hero-name {
@@ -939,10 +1092,37 @@ body {
         padding: 100px 20px 60px;
     }
 
+    .hero-badge-container {
+        margin-bottom: 20px;
+    }
+
     .hero-badge {
         font-size: 13px;
         padding: 6px 16px;
-        margin-bottom: 20px;
+    }
+
+    .hero-badge-hover {
+        min-width: 280px;
+        max-width: 320px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-10px) scale(0.95);
+    }
+
+    .hero-badge-container:hover .hero-badge-hover {
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+
+    .badge-hover-content {
+        padding: 20px;
+    }
+
+    .badge-roles {
+        gap: 6px;
+    }
+
+    .role-tag {
+        padding: 5px 12px;
+        font-size: 12px;
     }
 
     .hero-name {
@@ -1060,10 +1240,45 @@ body {
         min-height: 90vh;
     }
 
+    .hero-badge-container {
+        margin-bottom: 16px;
+    }
+
     .hero-badge {
         font-size: 12px;
         padding: 6px 14px;
+    }
+
+    .hero-badge-hover {
+        min-width: calc(100vw - 30px);
+        max-width: 320px;
+        left: 50%;
+    }
+
+    .badge-hover-content {
+        padding: 18px;
+    }
+
+    .badge-hover-section {
         margin-bottom: 16px;
+    }
+
+    .badge-hover-section h4 {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .role-tag {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    .badge-duration {
+        font-size: 14px;
+    }
+
+    .badge-status {
+        font-size: 12px;
     }
 
     .hero-name {
