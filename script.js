@@ -118,5 +118,24 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(section);
     });
+
+    // Show more/less functionality for coursework
+    const showMoreBtn = document.querySelector('.show-more-btn');
+    if (showMoreBtn) {
+        showMoreBtn.addEventListener('click', function() {
+            const courseworkList = document.querySelector('.coursework-list');
+            const isExpanded = this.classList.contains('expanded');
+            
+            if (isExpanded) {
+                this.classList.remove('expanded');
+                courseworkList.classList.remove('expanded');
+                this.querySelector('.show-more-text').textContent = 'Show more';
+            } else {
+                this.classList.add('expanded');
+                courseworkList.classList.add('expanded');
+                this.querySelector('.show-more-text').textContent = 'Show less';
+            }
+        });
+    }
 });
 
