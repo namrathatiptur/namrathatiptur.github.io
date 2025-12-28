@@ -448,25 +448,6 @@ body {
     color: var(--secondary-color);
 }
 
-/* Coursework Section */
-.coursework-section {
-    margin-top: 20px;
-}
-
-.coursework-section h4 {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 12px;
-    color: var(--primary-color);
-    letter-spacing: -0.01em;
-}
-
-.coursework-text {
-    font-size: 15px;
-    color: var(--secondary-color);
-    line-height: 1.8;
-    margin: 0;
-}
 
 
 /* Projects Grid */
