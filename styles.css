@@ -461,29 +461,11 @@ body {
     letter-spacing: -0.01em;
 }
 
-.coursework-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 12px 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 8px;
-}
-
-.coursework-list li {
+.coursework-text {
     font-size: 15px;
     color: var(--secondary-color);
-    padding: 6px 0;
-    padding-left: 20px;
-    position: relative;
-    line-height: 1.5;
-}
-
-.coursework-list li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--secondary-color);
+    line-height: 1.8;
+    margin: 0;
 }
 
 
