@@ -287,6 +287,27 @@ body {
     max-width: 800px;
 }
 
+.hero-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary-color);
+    letter-spacing: 0.02em;
+    margin-bottom: 24px;
+    transition: var(--transition);
+}
+
+.hero-badge:hover {
+    background: var(--primary-color);
+    color: var(--background);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
 .hero-name {
     font-size: 56px;
     font-weight: 600;
@@ -904,6 +925,12 @@ body {
         padding: 100px 20px 60px;
     }
 
+    .hero-badge {
+        font-size: 13px;
+        padding: 6px 16px;
+        margin-bottom: 20px;
+    }
+
     .hero-name {
         font-size: 42px;
     }
@@ -1017,6 +1044,12 @@ body {
     .hero {
         padding: 90px 15px 50px;
         min-height: 90vh;
+    }
+
+    .hero-badge {
+        font-size: 12px;
+        padding: 6px 14px;
+        margin-bottom: 16px;
     }
 
     .hero-name {
