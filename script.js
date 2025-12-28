@@ -121,19 +121,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show more/less functionality for coursework
     const showMoreBtn = document.querySelector('.show-more-btn');
-    if (showMoreBtn) {
-        showMoreBtn.addEventListener('click', function() {
-            const courseworkList = document.querySelector('.coursework-list');
-            const isExpanded = this.classList.contains('expanded');
+    const courseworkList = document.querySelector('.coursework-list');
+    
+    if (showMoreBtn && courseworkList) {
+        showMoreBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const isExpanded = courseworkList.classList.contains('expanded');
+            const showMoreText = this.querySelector('.show-more-text');
+            const showMoreIcon = this.querySelector('.show-more-icon');
             
             if (isExpanded) {
-                this.classList.remove('expanded');
                 courseworkList.classList.remove('expanded');
-                this.querySelector('.show-more-text').textContent = 'Show more';
+                this.classList.remove('expanded');
+                if (showMoreText) showMoreText.textContent = 'Show more';
+                if (showMoreIcon) showMoreIcon.textContent = '+';
             } else {
-                this.classList.add('expanded');
                 courseworkList.classList.add('expanded');
-                this.querySelector('.show-more-text').textContent = 'Show less';
+                this.classList.add('expanded');
+                if (showMoreText) showMoreText.textContent = 'Show less';
+                if (showMoreIcon) showMoreIcon.style.transform = 'rotate(45deg)';
             }
         });
     }

@@ -470,10 +470,6 @@ body {
     gap: 8px;
 }
 
-.coursework-list.expanded {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
 .coursework-list li {
     font-size: 15px;
     color: var(--secondary-color);
@@ -492,22 +488,25 @@ body {
 
 /* Hide items after the 4th one by default */
 .coursework-list li:nth-child(n+5) {
-    max-height: 0;
+    visibility: hidden;
+    height: 0;
     opacity: 0;
     overflow: hidden;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
     margin: 0;
-    transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease, margin 0.4s ease;
+    line-height: 0;
+    transition: visibility 0.3s ease, height 0.3s ease, opacity 0.3s ease, padding 0.3s ease, margin 0.3s ease;
 }
 
 .coursework-list.expanded li:nth-child(n+5) {
-    max-height: 50px;
+    visibility: visible;
+    height: auto;
     opacity: 1;
     overflow: visible;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding: 6px 0;
+    padding-left: 20px;
     margin: 0;
+    line-height: 1.5;
 }
 
 .show-more-btn {
