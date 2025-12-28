@@ -1,66 +1,38 @@
 # Portfolio Website
 
-A minimalistic, Apple-style portfolio website showcasing my professional experience, projects, and skills.
+A minimalistic, Apple-style portfolio website showcasing professional experience, projects, and technical skills.
 
-## Features
+## 🌐 Live Site
+
+**https://namrathatiptur.github.io/**
+
+## ✨ Features
 
 - Clean, minimalistic design inspired by Apple's aesthetic
-- Fully responsive layout
-- Smooth scrolling and animations
-- Optimized for GitHub Pages
+- Fully responsive layout for all devices
+- Smooth scrolling and subtle animations
+- Geometric background graphics
+- Interactive project showcases with device mockups
 
-## Deployment to GitHub Pages
+## 🛠️ Tech Stack
 
-### Option 1: Using GitHub Web Interface
+- HTML5
+- CSS3 (with CSS Grid & Flexbox)
+- JavaScript (Vanilla JS)
+- Font Awesome Icons
+- Devicon (for tech stack icons)
 
-1. Create a new repository on GitHub (e.g., `portfolio` or `namratha-portfolio`)
-2. Upload all files from this directory to the repository
-3. Go to repository Settings → Pages
-4. Under "Source", select the branch (usually `main` or `master`)
-5. Select the `/ (root)` folder
-6. Click Save
-7. Your site will be available at `https://[your-username].github.io/[repository-name]`
+## 📁 Project Structure
 
-### Option 2: Using Git Command Line
-
-```bash
-# Initialize git repository
-git init
-
-# Add all files
-git add .
-
-# Commit
-git commit -m "Initial commit: Portfolio website"
-
-# Add your GitHub repository as remote (replace with your repo URL)
-git remote add origin https://github.com/[your-username]/[repository-name].git
-
-# Push to GitHub
-git branch -M main
-git push -u origin main
+```
+portfolio/
+├── index.html      # Main HTML structure
+├── styles.css      # All styling and animations
+├── script.js       # Smooth scrolling and interactions
+└── README.md       # Project documentation
 ```
 
-Then follow steps 3-7 from Option 1 to enable GitHub Pages.
-
-## Customization
-
-### Update Links
-
-Edit `index.html` to update:
-- LinkedIn URL (search for `https://linkedin.com`)
-- GitHub URL (search for `https://github.com`)
-- Email address (already set to `namrathatm.ms@gmail.com`)
-
-### Customize Colors
-
-Edit `styles.css` and modify the CSS variables in `:root`:
-- `--primary-color`: Main text color
-- `--secondary-color`: Secondary text color
-- `--background`: Background color
-- `--surface`: Card/surface background color
-
-## Local Development
+## 🚀 Local Development
 
 Simply open `index.html` in a web browser, or use a local server:
 
@@ -68,20 +40,12 @@ Simply open `index.html` in a web browser, or use a local server:
 # Using Python
 python3 -m http.server 8000
 
-# Using Node.js (if you have http-server installed)
+# Using Node.js
 npx http-server
 ```
 
 Then visit `http://localhost:8000` in your browser.
 
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## License
+## 📝 License
 
 © 2024 Namratha Tiptur Manjunath. All rights reserved.
-
