@@ -486,14 +486,6 @@ body {
     color: var(--secondary-color);
 }
 
-.coursework-item-hidden {
-    display: none;
-}
-
-.coursework-item-hidden.show {
-    display: block;
-}
-
 /* Hide items after the 4th one by default */
 .coursework-list li:nth-child(n+5) {
     display: none;
