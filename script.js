@@ -119,31 +119,5 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 
-    // Show more/less functionality for coursework
-    const showMoreBtn = document.querySelector('.show-more-btn');
-    const courseworkList = document.querySelector('.coursework-list');
-    
-    if (showMoreBtn && courseworkList) {
-        showMoreBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            const isExpanded = courseworkList.classList.contains('expanded');
-            const showMoreText = this.querySelector('.show-more-text');
-            const showMoreIcon = this.querySelector('.show-more-icon');
-            
-            if (isExpanded) {
-                courseworkList.classList.remove('expanded');
-                this.classList.remove('expanded');
-                if (showMoreText) showMoreText.textContent = 'Show more';
-                if (showMoreIcon) showMoreIcon.textContent = '+';
-            } else {
-                courseworkList.classList.add('expanded');
-                this.classList.add('expanded');
-                if (showMoreText) showMoreText.textContent = 'Show less';
-                if (showMoreIcon) showMoreIcon.style.transform = 'rotate(45deg)';
-            }
-        });
-    }
 });
 
