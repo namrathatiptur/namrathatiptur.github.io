@@ -904,6 +904,465 @@ body {
     }
 }
 
+/* County Health Dashboard - Map Visualization */
+.county-map-preview {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.county-dot {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: fadeInOut 3s ease-in-out infinite;
+}
+
+.county-dot-1 {
+    width: 8px;
+    height: 8px;
+    background: #a8edea;
+    top: 25%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.county-dot-2 {
+    width: 10px;
+    height: 10px;
+    background: #fed6e3;
+    top: 35%;
+    right: 25%;
+    animation-delay: 0.5s;
+}
+
+.county-dot-3 {
+    width: 7px;
+    height: 7px;
+    background: #a8edea;
+    bottom: 30%;
+    left: 30%;
+    animation-delay: 1s;
+}
+
+.county-dot-4 {
+    width: 9px;
+    height: 9px;
+    background: #fed6e3;
+    bottom: 25%;
+    right: 20%;
+    animation-delay: 1.5s;
+}
+
+.county-dot-5 {
+    width: 6px;
+    height: 6px;
+    background: #a8edea;
+    top: 50%;
+    left: 45%;
+    animation-delay: 2s;
+}
+
+.county-dot-6 {
+    width: 8px;
+    height: 8px;
+    background: #fed6e3;
+    top: 20%;
+    left: 50%;
+    animation-delay: 2.5s;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.9;
+        transform: scale(1.2);
+    }
+}
+
+/* ContentCrew - Multi-Agent Network Visualization */
+.agent-network {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.agent-node {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.85;
+    animation: pulse 2.5s ease-in-out infinite;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.agent-node-1 {
+    width: 35px;
+    height: 35px;
+    background: #fa709a;
+    top: 20%;
+    left: 25%;
+    animation-delay: 0s;
+}
+
+.agent-node-2 {
+    width: 32px;
+    height: 32px;
+    background: #fee140;
+    top: 25%;
+    right: 25%;
+    animation-delay: 0.4s;
+}
+
+.agent-node-3 {
+    width: 30px;
+    height: 30px;
+    background: #fa709a;
+    bottom: 30%;
+    left: 30%;
+    animation-delay: 0.8s;
+}
+
+.agent-node-4 {
+    width: 28px;
+    height: 28px;
+    background: #fee140;
+    bottom: 25%;
+    right: 30%;
+    animation-delay: 1.2s;
+}
+
+.agent-connection {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
+    opacity: 0.3;
+    transform-origin: left center;
+}
+
+.agent-connection-1 {
+    width: 60px;
+    top: 22%;
+    left: 32%;
+    transform: rotate(15deg);
+}
+
+.agent-connection-2 {
+    width: 55px;
+    top: 40%;
+    left: 35%;
+    transform: rotate(-20deg);
+}
+
+.agent-connection-3 {
+    width: 50px;
+    bottom: 28%;
+    left: 38%;
+    transform: rotate(25deg);
+}
+
+/* Cogni Research - Document/Research Visualization */
+.research-docs {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.doc-paper {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
+}
+
+.doc-paper::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    width: 60%;
+    height: 1.5px;
+    background: #30cfd0;
+    opacity: 0.3;
+}
+
+.doc-paper::after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: 6px;
+    width: 45%;
+    height: 1.5px;
+    background: #330867;
+    opacity: 0.2;
+}
+
+.doc-paper-1 {
+    width: 35px;
+    height: 45px;
+    top: 20%;
+    left: 25%;
+    animation: docFloat1 3s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
+.doc-paper-2 {
+    width: 38px;
+    height: 48px;
+    top: 30%;
+    right: 25%;
+    animation: docFloat2 3s ease-in-out infinite;
+    animation-delay: 0.6s;
+}
+
+.doc-paper-3 {
+    width: 32px;
+    height: 42px;
+    bottom: 25%;
+    left: 30%;
+    animation: docFloat3 3s ease-in-out infinite;
+    animation-delay: 1.2s;
+}
+
+.doc-paper-4 {
+    width: 36px;
+    height: 46px;
+    bottom: 30%;
+    right: 28%;
+    animation: docFloat4 3s ease-in-out infinite;
+    animation-delay: 1.8s;
+}
+
+@keyframes docFloat1 {
+    0%, 100% {
+        transform: translateY(0) rotate(-8deg);
+    }
+    50% {
+        transform: translateY(-5px) rotate(-8deg);
+    }
+}
+
+@keyframes docFloat2 {
+    0%, 100% {
+        transform: translateY(0) rotate(12deg);
+    }
+    50% {
+        transform: translateY(-5px) rotate(12deg);
+    }
+}
+
+@keyframes docFloat3 {
+    0%, 100% {
+        transform: translateY(0) rotate(-10deg);
+    }
+    50% {
+        transform: translateY(-5px) rotate(-10deg);
+    }
+}
+
+@keyframes docFloat4 {
+    0%, 100% {
+        transform: translateY(0) rotate(8deg);
+    }
+    50% {
+        transform: translateY(-5px) rotate(8deg);
+    }
+}
+
+.research-link {
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background: linear-gradient(180deg, #30cfd0 0%, #330867 100%);
+    opacity: 0.3;
+    transform-origin: top center;
+}
+
+.research-link-1 {
+    top: 32%;
+    left: 42%;
+    transform: rotate(45deg);
+}
+
+.research-link-2 {
+    top: 45%;
+    right: 38%;
+    transform: rotate(-35deg);
+}
+
+/* RAG Observatory - Metrics Visualization */
+.rag-metrics {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 8px 0;
+}
+
+.metric-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 20px;
+}
+
+.metric-label {
+    width: 35px;
+    font-size: 9px;
+    color: #667eea;
+    font-weight: 600;
+    text-align: right;
+}
+
+.metric-bar-bg {
+    flex: 1;
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.metric-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 4px;
+    animation: fillMetric 1.5s ease-out;
+}
+
+.metric-bar-fill-1 {
+    width: 85%;
+    animation-delay: 0.1s;
+}
+
+.metric-bar-fill-2 {
+    width: 72%;
+    animation-delay: 0.2s;
+}
+
+.metric-bar-fill-3 {
+    width: 91%;
+    animation-delay: 0.3s;
+}
+
+.metric-bar-fill-4 {
+    width: 68%;
+    animation-delay: 0.4s;
+}
+
+.metric-bar-fill-5 {
+    width: 79%;
+    animation-delay: 0.5s;
+}
+
+@keyframes fillMetric {
+    from {
+        width: 0;
+    }
+}
+
+/* Healthcare Analytics - Medical Chart Visualization */
+.healthcare-chart {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.health-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #11998e;
+    opacity: 0.8;
+    animation: healthPulse 2s ease-in-out infinite;
+}
+
+.health-icon::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.health-icon-1 {
+    top: 25%;
+    left: 30%;
+    animation-delay: 0s;
+}
+
+.health-icon-2 {
+    top: 35%;
+    right: 30%;
+    animation-delay: 0.4s;
+}
+
+.health-icon-3 {
+    bottom: 30%;
+    left: 35%;
+    animation-delay: 0.8s;
+}
+
+.health-icon-4 {
+    bottom: 25%;
+    right: 32%;
+    animation-delay: 1.2s;
+}
+
+.health-line {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+    opacity: 0.4;
+}
+
+.health-line-1 {
+    width: 50px;
+    top: 30%;
+    left: 38%;
+    transform: rotate(20deg);
+}
+
+.health-line-2 {
+    width: 45px;
+    bottom: 28%;
+    left: 42%;
+    transform: rotate(-25deg);
+}
+
+@keyframes healthPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
 /* PCOS Cluster Visualization */
 .cluster-visualization {
     width: 100%;
