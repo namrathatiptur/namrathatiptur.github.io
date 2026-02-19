@@ -34,7 +34,9 @@ npm run build
 
 1. In your repo: **Settings → Pages**
 2. Under **Build and deployment**, set **Source** to **GitHub Actions**
-3. Push to `main` or `feature/ai-startup-liquid-glass-revamp` – the workflow will build and deploy
+3. Push to `main` – the workflow builds and deploys
+
+**If you use "Deploy from a branch" instead:** set **Branch** to `gh-pages` (the workflow pushes the built site there).
 
 ### Option 2: Manual deploy
 
