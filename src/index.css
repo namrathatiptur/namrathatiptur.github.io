@@ -1,0 +1,10 @@
+/* Portfolio styles – modular imports */
+
+@import './styles/variables.css';
+@import './styles/base.css';
+@import './styles/background.css';
+@import './styles/navbar.css';
+@import './styles/hero.css';
+@import './styles/blocks.css';
+@import './styles/footer.css';
+@import './styles/responsive.css';

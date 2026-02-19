@@ -1,0 +1,107 @@
+/* Footer */
+
+.footer {
+  padding: 48px 80px 48px 48px;
+  border-top: 1px solid var(--glass-border);
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+.footer-seal {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.08);
+  mask-image: url('/assets/syracuse-seal.svg');
+  mask-size: 160px;
+  mask-position: right 32px center;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url('/assets/syracuse-seal.svg');
+  -webkit-mask-size: 160px;
+  -webkit-mask-position: right 32px center;
+  -webkit-mask-repeat: no-repeat;
+  pointer-events: none;
+}
+
+[data-theme="dark"] .footer-seal {
+  background-color: rgba(247, 105, 0, 0.12);
+}
+
+.footer-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+  transition: color 0.3s var(--ease);
+}
+
+.footer-logo:hover {
+  color: var(--syracuse-orange);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.footer-nav a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s var(--ease);
+}
+
+.footer-nav a:hover {
+  color: var(--syracuse-orange);
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.footer-socials a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--secondary);
+  text-decoration: none;
+  transition: all 0.3s var(--ease);
+}
+
+.footer-socials a:hover {
+  color: var(--syracuse-orange);
+  border-color: var(--syracuse-orange);
+}
+
+.footer-socials i {
+  font-size: 18px;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  color: var(--tertiary);
+  margin: 0;
+}
