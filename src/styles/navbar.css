@@ -1,0 +1,210 @@
+/* Navbar – floating pill style */
+
+.navbar {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--navbar-bg);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  border-radius: 100px;
+  box-shadow: 0 8px 32px -8px var(--shadow);
+}
+
+.nav-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  letter-spacing: -0.03em;
+}
+
+.nav-logo:hover {
+  color: var(--accent-blue);
+}
+
+.nav-menu-resume {
+  margin-left: 8px;
+  padding-left: 16px;
+  border-left: 1px solid var(--glass-border);
+}
+
+.nav-resume-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  background: var(--gradient);
+  border: none;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff !important;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(43, 114, 215, 0.35);
+  overflow: hidden;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.nav-resume-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s var(--ease);
+}
+
+.nav-resume-btn:hover {
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(43, 114, 215, 0.45);
+}
+
+.nav-resume-btn:hover::before {
+  transform: translateX(100%);
+}
+
+.nav-menu-theme {
+  margin-left: 8px;
+  padding-left: 16px;
+  border-left: 1px solid var(--glass-border);
+}
+
+/* Theme switch – sliding pill */
+.theme-switch {
+  --thumb-size: 28px;
+  --track-height: 32px;
+  --track-width: 72px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.theme-switch-track {
+  width: var(--track-width);
+  height: var(--track-height);
+  border-radius: 100px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.theme-switch:hover .theme-switch-track {
+  border-color: var(--glass-border);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.theme-switch-thumb {
+  position: absolute;
+  left: 4px;
+  width: var(--thumb-size);
+  height: var(--thumb-size);
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s var(--ease);
+  z-index: 0;
+}
+
+.theme-switch:hover .theme-switch-thumb {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.theme-switch-dark .theme-switch-thumb {
+  transform: translateX(36px);
+}
+
+.theme-switch-light .theme-switch-thumb {
+  transform: translateX(0);
+}
+
+.theme-switch-icon {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tertiary);
+  z-index: 1;
+  transition: color 0.25s var(--ease);
+}
+
+.theme-switch-sun {
+  padding-right: 6px;
+}
+
+.theme-switch-moon {
+  padding-left: 6px;
+}
+
+.theme-switch-light .theme-switch-sun {
+  color: var(--background);
+}
+
+.theme-switch-dark .theme-switch-moon {
+  color: var(--background);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  gap: 6px;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+  transition: transform 0.3s var(--ease), opacity 0.3s;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s var(--ease);
+}
+
+.nav-menu a:hover {
+  color: var(--primary);
+}
