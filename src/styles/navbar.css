@@ -47,14 +47,14 @@
   display: inline-flex;
   align-items: center;
   padding: 10px 22px;
-  background: var(--gradient);
+  background: var(--syracuse-orange);
   border: none;
   border-radius: 100px;
   font-size: 14px;
   font-weight: 600;
   color: #ffffff !important;
   text-decoration: none;
-  box-shadow: 0 2px 12px rgba(43, 114, 215, 0.35);
+  box-shadow: 0 2px 12px rgba(247, 105, 0, 0.35);
   overflow: hidden;
   transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
@@ -78,7 +78,7 @@
 .nav-resume-btn:hover {
   color: #ffffff !important;
   transform: translateY(-1px);
-  box-shadow: 0 6px 24px rgba(43, 114, 215, 0.45);
+  box-shadow: 0 6px 24px rgba(247, 105, 0, 0.45);
 }
 
 .nav-resume-btn:hover::before {
