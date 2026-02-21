@@ -63,6 +63,7 @@
   position: relative;
   margin-bottom: 40px;
   display: inline-block;
+  z-index: 10;
 }
 
 .hero-badge {
@@ -90,6 +91,7 @@
   padding: 24px;
   border-radius: 20px;
   min-width: 360px;
+  z-index: 20;
 }
 
 .hero-badge-dropdown-section {
