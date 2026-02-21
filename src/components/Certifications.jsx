@@ -2,7 +2,6 @@ export default function Certifications() {
   const certs = [
     { name: 'Google Data Analytics Professional Certificate' },
     { name: 'Data Analytics & BI with Advanced Excel' },
-    { name: 'IBM Data Science Professional Certificate', status: 'In progress' },
   ]
 
   return (
