@@ -24,7 +24,7 @@ export default function Navbar({ menuOpen, setMenuOpen, scrollTo, theme, setThem
           ))}
           <li className="nav-menu-resume">
             <a
-              href="/resume"
+              href="/assets/Namratha_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="nav-resume-btn"
