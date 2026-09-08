@@ -4,7 +4,7 @@ export default function Contact() {
       <div className="block-inner block-contact-inner">
         <span className="block-label">07 — Contact</span>
         <h2 className="block-title block-contact-title">Let's work together</h2>
-        <p className="block-contact-desc">Open to internships, co-ops, and collaborative projects. Say hi.</p>
+        <p className="block-contact-desc">Open to full-time Data Analyst, Data Engineer, AI Engineer, and Data Scientist roles. Say hi.</p>
         <a href="mailto:namrathatm.ms@gmail.com" className="contact-cta">
           Get in touch
         </a>

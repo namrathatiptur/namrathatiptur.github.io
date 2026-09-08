@@ -12,6 +12,22 @@ export default function Experience() {
   }
   const jobs = [
     {
+      date: 'Jun 2026 – Aug 2026',
+      title: 'Data and Research Intern',
+      subtitle: null,
+      company: 'Centre for Public Impact',
+      companyUrl: 'https://www.centreforpublicimpact.org',
+      logo: 'https://www.google.com/s2/favicons?domain=centreforpublicimpact.org&sz=128',
+      location: 'Remote',
+      bullets: [
+        'Automated a survey-to-report pipeline (Python, scheduled job, PostgreSQL), cutting report turnaround from 3 days to under 30 minutes',
+        'Consolidated survey data from 3 separate sources into one queryable store with automated data-quality checks flagging incomplete responses',
+        'Segmented 400+ stakeholder responses across 6 Latin American markets in SQL, uncovering a 30% urban-rural engagement gap and running significance testing on a small, hard-to-reach sample',
+        'Built a self-serve Power BI dashboard for 12 stakeholders, cutting ad hoc data requests by ~50% and standardizing reporting across two programs for non-technical government and philanthropic audiences',
+        'Themed 400+ open-ended responses using LLM-based analysis validated against manual coding, accelerating workflows with AI-assisted tools (Claude, Codex, Copilot)',
+      ],
+    },
+    {
       date: 'Aug 2023 – Aug 2024',
       title: 'Associate Software Engineer',
       subtitle: 'Data Engineering & Analytics',
