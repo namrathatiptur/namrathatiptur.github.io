@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 export default function Hero({ scrollTo }) {
   const [badgeHover, setBadgeHover] = useState(false)
-  const roles = ['Data Engineer', 'ML Engineer', 'Data Analyst', 'Data Scientist', 'AI Engineer']
+  const roles = ['Data Analyst', 'Data Engineer', 'AI Engineer', 'Data Scientist']
 
   return (
     <section id="home" className="hero">
@@ -20,7 +20,7 @@ export default function Hero({ scrollTo }) {
             onMouseLeave={() => setBadgeHover(false)}
             onTouchEnd={(e) => { e.preventDefault(); setBadgeHover(!badgeHover) }}
           >
-            <button className="hero-badge">Seeking Co-op / Internship · Summer 2026</button>
+            <button className="hero-badge">Open to Full-Time Roles · 2027</button>
             {badgeHover && (
               <div className="hero-badge-dropdown glass-card">
                 <div className="hero-badge-dropdown-section">
@@ -33,7 +33,7 @@ export default function Hero({ scrollTo }) {
                 </div>
                 <div className="hero-badge-dropdown-section">
                   <span className="hero-badge-label">Timeline</span>
-                  <p className="hero-badge-timeline">May – August 2026 · Full-time · On-site or Remote</p>
+                  <p className="hero-badge-timeline">Available January 2027 · Full-time · On-site or Remote</p>
                 </div>
               </div>
             )}

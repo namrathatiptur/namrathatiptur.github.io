@@ -13,8 +13,8 @@ export default function About() {
             <h2 className="block-title">Building with data</h2>
             <div className="about-bio">
               <p>I'm a data engineer and ML enthusiast pursuing my Master's at Syracuse University. I work with healthcare data, build ETL pipelines, and design machine learning models.</p>
-              <p>Before grad school, I spent a year as a data engineer at <strong>Carelon Global Solutions</strong> in Bangalore, processing terabytes of data daily. I love the problem-solving aspect—optimizing queries, building pipelines, training models—and figuring out how to make things work better.</p>
-              <p>I'm looking for opportunities to apply what I've learned through internships, co-ops, or collaborative projects.</p>
+              <p>Before grad school, I spent a year as a data engineer at <strong>Carelon Global Solutions</strong> in Bangalore, processing terabytes of data daily. Most recently, I interned as a Data and Research Intern at the <strong>Centre for Public Impact</strong>, building data pipelines and dashboards that helped government and philanthropic partners make sense of survey data. I love the problem-solving aspect—optimizing queries, building pipelines, training models—and figuring out how to make things work better.</p>
+              <p>I'm graduating in December 2026 and looking for full-time roles as a Data Analyst, Data Engineer, AI Engineer, or Data Scientist.</p>
             </div>
             <div className="about-education">
               <h3 className="about-edu-title">Education</h3>
