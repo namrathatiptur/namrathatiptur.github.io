@@ -1,50 +1,40 @@
-import { useState } from 'react'
+import { activities, PhotoCarousel } from './Activities'
+
+const ROLES = ['Data Engineer', 'Data Scientist', 'AI Engineer', 'Data Analyst']
 
 export default function Hero({ scrollTo }) {
-  const [badgeHover, setBadgeHover] = useState(false)
-  const roles = ['Data Analyst', 'Data Engineer', 'AI Engineer', 'Data Scientist']
+  const spot = activities[0]
 
   return (
     <section id="home" className="hero">
-      <div className="hero-inner">
+      <div className="hero-inner hero-split">
+        <aside className="hero-spot glass-card" aria-label="Recent spotlight">
+          <div className="hero-spot-media">
+            <PhotoCarousel images={spot.images} />
+          </div>
+          <div className="hero-spot-body">
+            <span className="hero-spot-kicker"><i className="hero-spot-dot" />Recent spotlight · {spot.tag}</span>
+            <h2 className="hero-spot-title">{spot.title}</h2>
+            <button className="hero-spot-link" onClick={() => scrollTo('activities')}>
+              See all activities <i className="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </aside>
+
         <div className="hero-text">
-          <p className="hero-eyebrow">Data Engineer & ML Enthusiast</p>
+          <p className="hero-eyebrow">Data Engineer · Analytics & ML</p>
           <h1 className="hero-name">
-            <span className="hero-name-line">Namratha</span>
-            <span className="hero-name-line hero-name-accent">Tiptur Manjunath</span>
+            Namratha <span className="hero-name-accent">Tiptur Manjunath</span>
           </h1>
-          <p className="hero-tagline">Building intelligent systems and transforming data into insights</p>
-          <div
-            className="hero-badge-wrap"
-            onMouseEnter={() => setBadgeHover(true)}
-            onMouseLeave={() => setBadgeHover(false)}
-            onTouchEnd={(e) => { e.preventDefault(); setBadgeHover(!badgeHover) }}
-          >
-            <button className="hero-badge">Open to Full-Time Roles · 2027</button>
-            {badgeHover && (
-              <div className="hero-badge-dropdown glass-card">
-                <div className="hero-badge-dropdown-section">
-                  <span className="hero-badge-label">Roles</span>
-                  <div className="hero-badge-tags">
-                    {roles.map((r) => (
-                      <span key={r} className="hero-badge-tag">{r}</span>
-                    ))}
-                  </div>
-                </div>
-                <div className="hero-badge-dropdown-section">
-                  <span className="hero-badge-label">Timeline</span>
-                  <p className="hero-badge-timeline">Available January 2027 · Full-time · On-site or Remote</p>
-                </div>
-              </div>
-            )}
+          <p className="hero-tagline">I build reliable data platforms, from cloud ETL and lakehouses to the analytics and ML that run on them.</p>
+          <div className="hero-open">
+            <p className="hero-open-status"><i />Open to full-time roles · from January 2027</p>
+            <ul className="hero-open-roles">
+              {ROLES.map((r) => <li key={r}>{r}</li>)}
+            </ul>
           </div>
           <div className="hero-actions">
-            <div className="hero-actions-primary">
-              <a href="mailto:namrathatm.ms@gmail.com" className="hero-cta">
-                Get in touch
-              </a>
-            </div>
-            <div className="hero-actions-divider" aria-hidden="true" />
+            <a href="mailto:namrathatm.ms@gmail.com" className="hero-cta">Get in touch</a>
             <div className="hero-links">
               <a href="https://www.linkedin.com/in/namrathatm/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <i className="fab fa-linkedin-in"></i>
@@ -56,9 +46,6 @@ export default function Hero({ scrollTo }) {
           </div>
         </div>
       </div>
-      <button className="hero-scroll" onClick={() => scrollTo('about')} aria-label="Scroll down">
-        <i className="fas fa-chevron-down"></i>
-      </button>
     </section>
   )
 }

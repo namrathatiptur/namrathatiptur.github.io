@@ -35,26 +35,15 @@ export default function Navbar({ menuOpen, setMenuOpen, scrollTo, theme, setThem
           </li>
           <li className="nav-menu-theme">
             <button
-              className={`theme-switch ${theme === 'dark' ? 'theme-switch-dark' : 'theme-switch-light'}`}
+              className="theme-toggle"
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-              role="switch"
-              aria-checked={theme === 'dark'}
+              title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
             >
-              <span className="theme-switch-track">
-                <span className="theme-switch-thumb" />
-                <span className="theme-switch-icon theme-switch-sun">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                    <circle cx="12" cy="12" r="4" />
-                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
-                  </svg>
-                </span>
-                <span className="theme-switch-icon theme-switch-moon">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-                  </svg>
-                </span>
-              </span>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="2.2" />
+                <path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor" />
+              </svg>
             </button>
           </li>
         </ul>

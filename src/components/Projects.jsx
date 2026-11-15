@@ -1,5 +1,6 @@
 export default function Projects() {
   const iconMap = {
+    pulselake: 'fa-train-subway',
     county: 'fa-map-location-dot',
     contentcrew: 'fa-robot',
     cogni: 'fa-magnifying-glass-chart',
@@ -9,12 +10,13 @@ export default function Projects() {
   }
 
   const projects = [
-    { title: 'US County Health Outcomes Dashboard', desc: 'Tableau dashboard with 29+ health metrics across 3,000+ US counties.', link: 'https://github.com/namrathatiptur/US-County-Health-Outcomes-Dashboard', visual: 'county' },
-    { title: 'ContentCrew', desc: 'Multi-agent content system with crewAI—research, write, edit, fact-check.', link: 'https://github.com/namrathatiptur/contentcrew', visual: 'contentcrew' },
-    { title: 'Cogni Research', desc: 'AI research assistant with LangGraph, Claude, MCP—auto research & citations.', link: 'https://github.com/namrathatiptur/cogni-research', visual: 'cogni' },
-    { title: 'RAG Observatory', desc: 'LLM eval framework—relevance, grounding, attribution, consistency metrics.', link: 'https://github.com/namrathatiptur/rag-observatory', visual: 'rag' },
-    { title: 'PCOS Subtype Discovery', desc: 'Unsupervised learning for 4 clinical subtypes. 82% stability, 0.73 ARI.', link: null, visual: 'pcos' },
-    { title: 'Healthcare Analytics', desc: '10+ SQL projects, CDC PLACES dashboard, AI job landscape analysis.', link: null, visual: 'healthcare' },
+    { title: 'PulseLake', desc: 'End-to-end pipeline over the live NYC subway feed: ~740K rows/hour into 7 dbt marts, 116 tests in CI.', link: 'https://github.com/namrathatiptur/pulselake', visual: 'pulselake' },
+    { title: 'US County Health Outcomes Dashboard', desc: 'Tableau analysis of 29+ health outcome metrics across 3,000+ US counties.', link: 'https://github.com/namrathatiptur/US-County-Health-Outcomes-Dashboard', visual: 'county' },
+    { title: 'ContentCrew', desc: 'Multi-agent crewAI pipeline that researches, drafts, edits and fact-checks content with role-based agents.', link: 'https://github.com/namrathatiptur/contentcrew', visual: 'contentcrew' },
+    { title: 'Cogni Research', desc: 'Autonomous research agent on LangGraph, Claude and MCP with vector memory and cited reports.', link: 'https://github.com/namrathatiptur/cogni-research', visual: 'cogni' },
+    { title: 'RAG Observatory', desc: 'RAG evaluation framework with 5 custom metrics, improving hallucination detection by 15% over 1,000+ queries.', link: 'https://github.com/namrathatiptur/rag-observatory', visual: 'rag' },
+    { title: 'PCOS Subtype Discovery', desc: 'Extended Nature Medicine research on 4 PCOS subtypes across 5 clustering methods: 82% stability, 0.73 ARI.', link: null, visual: 'pcos' },
+    { title: 'Healthcare Analytics', desc: '10+ advanced SQL studies on care fragmentation, health equity and provider fraud, plus a 50K-posting AI jobs analysis.', link: null, visual: 'healthcare' },
   ]
 
   const ProjectCard = ({ p }) => {

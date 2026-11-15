@@ -1,6 +1,6 @@
 export default function About() {
   const education = [
-    { date: 'Dec 2026', title: 'Master of Science, Information Systems', school: 'Syracuse University', focus: 'GPA 4.0/4.0 · ML, Data Analytics, BI' },
+    { date: 'Dec 2026', title: 'Master of Science, Information Systems', school: 'Syracuse University', focus: 'GPA 4.0/4.0 · ML, Data Engineering, Data Analytics, BI' },
     { date: 'Aug 2023', title: 'B.Tech, Computer Science & Engineering', school: 'Reva University', focus: 'GPA 3.5/4.0' },
   ]
 
@@ -12,9 +12,10 @@ export default function About() {
           <div className="about-text">
             <h2 className="block-title">Building with data</h2>
             <div className="about-bio">
-              <p>I'm a data engineer and ML enthusiast pursuing my Master's at Syracuse University. I work with healthcare data, build ETL pipelines, and design machine learning models.</p>
-              <p>Before grad school, I spent a year as a data engineer at <strong>Carelon Global Solutions</strong> in Bangalore, processing terabytes of data daily. Most recently, I interned as a Data and Research Intern at the <strong>Centre for Public Impact</strong>, building data pipelines and dashboards that helped government and philanthropic partners make sense of survey data. I love the problem-solving aspect—optimizing queries, building pipelines, training models—and figuring out how to make things work better.</p>
-              <p>I'm graduating in December 2026 and looking for full-time roles as a Data Analyst, Data Engineer, AI Engineer, or Data Scientist.</p>
+              <p>I'm a data engineer with three years of industry experience, finishing an MS in Information Systems at Syracuse University with a 4.0 GPA. I design pipelines that move data reliably at scale and turn it into decisions.</p>
+              <p>At <strong>Carelon Global Solutions (Elevance Health)</strong> I migrated legacy Teradata and Hadoop workloads to AWS and Snowflake, ran 35+ pipelines ingesting 2M+ healthcare records a day, and moved hospital feeds from next-day batch to near real time. Before that, at <strong>Belgian Waffle Factory</strong>, I built the AWS Airflow and Redshift platform behind multi-channel sales reporting.</p>
+              <p>Today I'm a Software Developer at <strong>Syracuse University's Open Source Program Office</strong>, engineering the TeachOrange platform, after a summer at the <strong>Centre for Public Impact</strong> automating survey reporting for government and philanthropic partners.</p>
+              <p>Graduating December 2026 and open to full-time Data Engineer, Data Scientist, AI Engineer and Data Analyst roles from January 2027.</p>
             </div>
             <div className="about-education">
               <h3 className="about-edu-title">Education</h3>
@@ -30,7 +31,7 @@ export default function About() {
             </div>
           </div>
           <div className="about-image-wrap">
-            <img src="/assets/IMG_2440-removebg-preview.png" alt="Namratha Tiptur Manjunath" />
+            <img src="/assets/namratha-profile.jpg" alt="Namratha Tiptur Manjunath" />
           </div>
         </div>
       </div>
