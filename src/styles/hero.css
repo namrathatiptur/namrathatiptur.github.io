@@ -9,7 +9,49 @@
   z-index: 1;
 }
 
+.hero-scene {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: calc(100% + 260px); /* spill past the hero, then fade */
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 55%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 55%, transparent 100%);
+}
+
+.hero-scene canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+.hero-aurora {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.55;
+  mix-blend-mode: screen;
+  animation: auroraDrift 22s ease-in-out infinite alternate;
+}
+
+.hero-aurora-1 { width: 46vw; height: 46vw; left: -8vw; top: 6%; background: radial-gradient(circle, rgba(43, 114, 215, 0.55), transparent 65%); }
+.hero-aurora-2 { width: 40vw; height: 40vw; right: -6vw; top: -4%; background: radial-gradient(circle, rgba(247, 105, 0, 0.42), transparent 65%); animation-duration: 26s; animation-delay: -6s; }
+.hero-aurora-3 { width: 34vw; height: 34vw; left: 38%; top: 40%; background: radial-gradient(circle, rgba(124, 92, 255, 0.4), transparent 65%); animation-duration: 30s; animation-delay: -12s; }
+
+[data-theme="light"] .hero-aurora { mix-blend-mode: multiply; opacity: 0.25; }
+
+@keyframes auroraDrift {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(4vw, 3vh) scale(1.12); }
+  100% { transform: translate(-3vw, -2vh) scale(0.95); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-aurora { animation: none; }
+}
+
 .hero-inner {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -359,4 +401,16 @@
   .hero-split { grid-template-columns: 1fr; gap: 36px; }
   .hero-text { order: -1; }
   .hero-spot { max-width: 560px; }
+}
+
+/* Soft shade behind the intro so the network never fights the text */
+.hero-text { position: relative; isolation: isolate; }
+.hero-text::before {
+  content: '';
+  position: absolute;
+  inset: -60px -80px;
+  z-index: -1;
+  background: radial-gradient(closest-side, var(--background) 35%, transparent 100%);
+  opacity: 0.8;
+  pointer-events: none;
 }

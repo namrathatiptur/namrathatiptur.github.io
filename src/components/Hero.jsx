@@ -1,4 +1,5 @@
 import { activities, PhotoCarousel } from './Activities'
+import HeroScene from './HeroScene'
 
 const ROLES = ['Data Engineer', 'Data Scientist', 'AI Engineer', 'Data Analyst']
 
@@ -7,6 +8,7 @@ export default function Hero({ scrollTo }) {
 
   return (
     <section id="home" className="hero">
+      <HeroScene />
       <div className="hero-inner hero-split">
         <aside className="hero-spot glass-card" aria-label="Recent spotlight">
           <div className="hero-spot-media">

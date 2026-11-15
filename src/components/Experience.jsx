@@ -145,7 +145,6 @@ export default function Experience() {
   // Career timeline: proportional segments, oldest → newest
   const chron = [...jobs].reverse()
   const first = chron[0].start, last = chron[chron.length - 1].end
-  const total = months(first, last)
   const totalFT = jobs.filter((j) => j.type === 'Full-time').reduce((a, j) => a + months(j.start, j.end), 0)
 
   const onKey = (e) => {
@@ -166,19 +165,18 @@ export default function Experience() {
           </div>
           <div className="exp-timeline-track">
             {chron.map((j) => {
-              const left = ((months(first, j.start) - 1) / total) * 100
-              const width = (months(j.start, j.end) / total) * 100
+              const m = months(j.start, j.end)
               const idx = jobs.indexOf(j)
               return (
                 <button
                   key={j.id}
                   tabIndex={-1}
                   className={`exp-seg ${idx === active ? 'is-active' : ''}`}
-                  style={{ left: `${left}%`, width: `max(${width}%, 28px)` }}
+                  style={{ flexGrow: m }}
                   onClick={() => setActive(idx)}
                   title={`${j.company} · ${j.date}`}
                 >
-                  <span>{j.short}</span>
+                  <span>{j.short}</span><small>{j.start.slice(0, 4)}{j.end.slice(0, 4) !== j.start.slice(0, 4) ? `–${j.end.slice(2, 4)}` : ''}</small>
                 </button>
               )
             })}

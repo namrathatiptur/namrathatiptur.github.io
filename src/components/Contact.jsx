@@ -6,7 +6,7 @@ export default function Contact() {
         <div className="contact-card glass-card">
           <div className="contact-copy">
             <h2 className="contact-title">Let's work together</h2>
-            <p className="block-contact-desc">Available full-time from January 2027 for data engineering, data science, AI and analytics roles.</p>
+            <p className="block-contact-desc">Email is the fastest way to reach me.</p>
           </div>
           <div className="contact-actions">
             <a href="mailto:namrathatm.ms@gmail.com" className="contact-cta">
